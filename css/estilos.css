@@ -327,6 +327,8 @@ figure {
 .container {
   /* border: 1px solid red; */
   max-width: 1000px;
+  /*width: 100%;*/
+  flex: 1;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
@@ -335,9 +337,26 @@ figure {
   flex-wrap: inherit;
 }
 /*Desktop First empieza desde el más grande*/
-@media screen and (max-width: 1024px)
-@media screen and (max-width: 768px)
-
+/*@media screen and (max-width: 1024px)*/
+@media screen and (max-width: 767px) {
+.header {
+  display: block;
+  height: auto;
+      }
+      .header ol {
+        display: block;
+      }
+      .header ol li {
+        height: 50px;
+        
+      }
+      .header a {
+        justify-content: center;
+      }
+      .header .logo {
+        text-align: center;
+      }
+}
 @media screen and (max-width: 480px)
 
 @media screen and (max-width: 320px) {
