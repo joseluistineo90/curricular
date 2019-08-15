@@ -29,14 +29,15 @@ valores */
 /* celeste = #026fff */
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?6i4w2b');
-  src:  url('../fonts/icomoon.eot?6i4w2b#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?6i4w2b') format('truetype'),
-    url('../fonts/icomoon.woff?6i4w2b') format('woff'),
-    url('../fonts/icomoon.svg?6i4w2b#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?bqb2fe');
+  src:  url('../fonts/icomoon.eot?bqb2fe#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?bqb2fe') format('truetype'),
+    url('../fonts/icomoon.woff?bqb2fe') format('woff'),
+    url('../fonts/icomoon.svg?bqb2fe#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -56,6 +57,7 @@ valores */
 .icon-menu:before {
   content: "\e900";
 }
+
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -106,7 +108,6 @@ h2 {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 .hero-image{
@@ -176,8 +177,8 @@ h2 {
 .project-imageContainer {
   width: 50%;
 }
-.project-imageContainer img {
 
+.project-imageContainer img {
   max-width: 100%;
 }
 
@@ -300,7 +301,7 @@ figure {
   background-color: #056fff;
   color: white;
   height: 150px;
-  /*display: flex;*/
+  display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -360,7 +361,7 @@ figure {
 .container {
   /* border: 1px solid red; */
   max-width: 1000px;
-  /*width: 100%;*/
+  /* width: 100%; */
   flex: 1;
   margin: 0 auto;
   display: inherit;
@@ -371,23 +372,30 @@ figure {
 }
 
 .burger-button {
-width: 40px;
-height: 40px;
-border-radius: 20px;
-background-color:rgba(0, 0, 0, .8);
-display: none;
-line-height: 40px;
-text-align: center;
-position: fixed;
-z-index: 4;
-left: 5px;
-top: 5px;
-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .8);
+  display: none;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  z-index: 4;
+  left: 5px;
+  top: 5px;
+  color: white;
 }
-/*Desktop First empieza desde el más grande*/
-@media screen and (max-width: 1024px)
-{
-  .container{
+
+/* desktop first que empieces desde el MQ más grande */
+
+@media screen and (max-width: 1023px) {
+  .event-list-title {
+    margin-left: 0;
+  }
+  .portfolio {
+    padding: 0;
+  }
+  .container {
     padding: 0 1em;
   }
   .hero {
@@ -395,10 +403,6 @@ color: white;
     position: relative;
     overflow: hidden;
     padding: 2em;
-  }
-  h1 {
-    font-size: 2em;
-    z-index: 2;
   }
   .hero-image {
     position: absolute;
@@ -409,138 +413,176 @@ color: white;
     bottom: 0;
     width: 100%;
   }
+  h1 {
+    font-size: 2em;
+    z-index: 2;
+  }
 }
-@media screen and (max-width: 767px) {
- .burger-button{
-   display: block;
- }
-.header {
-  display: block;
+
+.html-video {
+  width: 100%;
   height: auto;
-      }
-      .header ol {
-        display: block;
-      }
-      .header ol li {
-        height: 50px;
-        
-      }
-      .header a {
-        justify-content: center;
-        height: 40px;
-        font-size: 2em;
-        text-decoration: underline;
-        margin-bottom: .5em;
-      }
-      .header .logo {
-        text-align: center;
-      }
-      .menu {
-        position: fixed;
-        background: rgba(5,11,255, .9);
-        z-index: 3;
-        top: 0;
-        left: -100vw;/*para que el menu se oculte a la izquierda y cree el efecto de slide*/
-        width: 100vw;
-        /*height: 100vh;*/
-        botton: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: .3s;
-      }
-      .menu.is-active{
-        left: 0;
-      }
-      .project {
-        display: block;
-      }
-      .project-imageContainer {
-        width: auto;
-        text-align: center;
-      }
-      .project-details {
-        width: auto;
-        /*font-size: 16px;*/
-      }
-      .project-course, .project-date, .project-url {
-
-        margin: .3em 0;
-        margin-bottom: .3em;
-      }
-
-      .project-title {
-        font-size: 1.5em;
-      }
-
-      .project-url {
-        
-        font-size: 1em;
-      }
-      .project-course {
-        
-        font-size: .7em;
-      }
-      .project-date {
-        
-        font-size: 1em;
-      }
-      .project-description {
-        
-        font-size: .8em;
-      }
-      .event {
-        width: auto;
-        flex-shrink: initial;
-
-      }
-      
-      .event-img {
-        width: 100%;
-      }
+  /* max-width: 100%; */
 }
-@media screen and (max-width: 480px) { 
 
-  h1{
-    font-size: 1.5em;
+.youtube-video {
+  /* width: 100%; */
+  /* height: auto; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.flexible-video {
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  background: blue;
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 1.2em;
+    margin: .5em 0;
+  }
+  .burger-button {
+    display: block;
+  }
+  .header {
+    display: block;
+    height: auto;
+  }
+  .header ol {
+    display: block;
+  }
+  .header ol li {
+    height: 50px;
+  }
+  .header a {
+    justify-content: center;
+    height: 40px;
+    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: .5em;
+  }
+  .header .logo {
+    text-align: center;
   }
 
-.project-details {
-  width: auto;
-  font-size: 12px;
+  .menu {
+    position: fixed;
+    background: rgba(5, 111, 255, .9);
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    /* height: 100vh; */
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+  .menu.is-active {
+    left: 0;
+  }
+
+  .project {
+    display: block;
+  }
+  .project-imageContainer {
+    width: auto;
+    text-align: center;
+  }
+  .project-details {
+    width: auto;
+    /* font-size: 10px; */
+  }
+  .project-course, .project-date, .project-url { 
+    margin: .3em 0;
+  }
+  .project-title {
+    font-size: 1.5em;
+    margin-bottom: .3em;
+  }
+  .project-url {
+    font-size: 1em;
+
+  }
+  .project-course {
+    font-size: .7em;
+
+  }
+  .project-date {
+    font-size: 1em;
+
+  }
+  .project-description {
+    font-size: 1em;
+
+  }
+
+  .event {
+    width: auto;
+    flex-shrink: initial;
+  }
+
+  .event img {
+    width: 100%;
+  }
 }
 
-.event-detail {
-  margin: -2em .5em .5em;
-  padding: 1em;
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  .project-details {
+    font-size: 14px;
+  }
+
+  .event-detail {
+    /* 1em = 16px */
+    margin: -2em .5em .5em;
+    padding: 1em;
+  }
+
+  .contact {
+    height: auto;
+    padding: 1.5em 0;
+    text-align: center;
+    display: block;
+  }
+  .form-email button {
+    margin: 1em auto;
+  }
+  .form-email h3 {
+    margin-top: 0;
+  }
+  .footer {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+  .social-link {
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+  }
 }
 
-.contact {
-  height: auto;
-  padding: 1em 0;
-  text-align: center;
-  display: block;
-}
-.form-email button {
-  margin: 1em auto;
-}
 
-.form-email h3 {
-  margin-top: 0;
-}
-.footer {
-  display: block;
-  text-align: center;
-  border: 1px solid transparent;
-}
-
-}
 @media screen and (max-width: 320px) {
-    h1{
-      font-size: 1.2em;
-      background: rgba(0, 0, 0, .5)
-    }
-    .hero {
-      padding: 2em 1em;
-    }
+  h1 {
+    font-size: 1.2em;
+    /* background: rgba(0,0,0,.5) */
+  }
+  .hero {
+    padding: 2em 1em;
+  }
 }
+
